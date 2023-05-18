@@ -1,16 +1,16 @@
-local parsers = require "nvim-treesitter.parsers"
-local installer = require "nvim-treesitter.install"
+local parsers = require("nvim-treesitter.parsers")
+local installer = require("nvim-treesitter.install")
 
 local M = {}
 
 function M.init()
   parsers.get_parser_configs().angular = {
     install_info = {
-      url = "https://github.com/steelsojka/tree-sitter-angular",
+      url = "https://github.com/sykesm/tree-sitter-angular",
       files = { "src/parser.c" },
-      branch = "main"
+      branch = "updated-abi",
     },
-    maintainers = {"@steelsojka"}
+    maintainers = { "@steelsojka" },
   }
 
   if not parsers.has_parser("angular") then
