@@ -13,5 +13,5 @@
 
 (element
   ((text) @angular
-   (#lua-match? @angular "%{%{.*%}%}")
+   (#lua-match? @angular "%{%{.-%}%}")
    (#offset! @angular 0 2 0 -2)))
